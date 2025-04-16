@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
+    background:#e5e4b4;
+}
+
+.contact h2{
+    font-size: 40px;
+    color: #56a263;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact form{
+    width: 600px;
+    text-align: center;
+}
+
+form .input-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box .input-field{
+    width: 48.5%;
+
+}
+
+.field .item{
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #114a29;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #dc9c24;
+    margin: 12px 0;
+}
+
+.field.error .item{
+    border-color: #b81d13;
+}
+
+.field .item::placeholder{
+    color: #114a29;
+}
+
+.field .error-txt{
+    font-size: 14.5px;
+    color: #b81d13;
+    text-align: left;
+    margin: 5px 0 10px;
+    display: none;
+}
+
+.field.error .error-txt{
+    display: block;
+}
+
+form .textarea-field .item{
+    resize:none;
+}
+
+form .textarea-field .error-txt{
+    margin-top: -10px;
+}
+
+form button{
+    padding: 12px 32px;
+    background: #56a263;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #114a29;
+    font-size: 16px;
+    color: #114a29;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .5s;
+}
+
+form button:hover{
+    box-shadow: none;
+}
+
+@media screen and (max-width: 600px) {
+    .field .item{
+        width: 100%;
+        padding: 5px;
+        background: transparent;
+        border: 1px solid #114a29;
+        outline: none;
+        border-radius: 6px;
+        font-size: 8px;
+        color: #dc9c24;
+        margin: 6px 0;
+    }
+    form button{
+        padding: 6px 16px;
+        background: #56a263;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        box-shadow: 0 0 5px #114a29;
+        font-size: 8px;
+        color: #114a29;
+        letter-spacing: 0.5px;
+        font-weight: 300;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: .5s;
+    }
+    .field.error .item{
+        border-color: #b81d13;
+    }
+    
+    .field .item::placeholder{
+        color: #114a29;
+    }
+    
+    .field .error-txt{
+        font-size: 7.25px;
+        color: #b81d13;
+        text-align: left;
+        margin: 2.5px 0 5px;
+        display: none;
+    }
+    
+    .field.error .error-txt{
+        display: block;
+    }
+    
+    form .textarea-field .item{
+        resize:none;
+    }
+    
+    form .textarea-field .error-txt{
+        margin-top: -5px;
+    }
+
+    .contact{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        min-height: 50vh;
+        background:#e5e4b4;
+    }
+    
+    .contact h2{
+        font-size: 20px;
+        color: #56a263;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    .contact form{
+        width: 300px;
+        text-align: center;
+    }
+    
+    form .input-box{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .input-box .input-field{
+        width: 48.5%;
+    
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e5e4b4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow-y: auto;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* For Firefox */
+body {
+    scrollbar-width: none;
+}
+
+/* For IE and Edge */
+body {
+    -ms-overflow-style: none;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #dc9c24;
+    font-size: 1rem;
+}
+
+.hover_l:hover{
+    color: #114a29;
+}
+
+.hover_d{
+    color: #dc9c24;  /* Zlatá barva */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hover_d:hover {
+    color: #114a29;  /* Tmavě zelená při najetí myší */
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+    background: #56a263;
+    margin-top: 0;
+    z-index: 100; /* Přidáno: zajistí, že header bude nad obsahem */
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #56a263;
+}
+
+.navbar .logo img{
+    height: 50px;
+    width: auto;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar .toggle_btn{
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #dc9c24;
+}
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 75px;         /* Posunuto níž z 60px na 75px */
+    width: 180px;      /* Zmenšeno z 200px na 180px */
+    background: #56a263;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown_menu.open{
+    display: block;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    list-style: none;
+}
+
+.hover_l{
+    color: #dc9c24;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.hover_l::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #dc9c24;
+    transition: width 0.3s ease;
+}
+
+.hover_l:hover::after{
+    width: 100%;
+}
+
+@media (max-width: 768px){
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar .links {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: none;
+        width: 180px;  /* Upravená šířka */
+        right: 2rem;   /* Upraveno zpět na původní hodnotu */
+        left: auto;    /* Odstraněno centrování */
+        margin: 0;     /* Odstraněno centrování */
+    }
+
+    .dropdown_menu.open {
+        display: block;
+    }
+
+    .contact form {
+        width: 90%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar .logo img {
+        height: 40px;
+    }
+
+    .dropdown_menu {
+        width: 150px;
+        right: 1rem;
+    }
+
+    .contact h2 {
+        font-size: 24px;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    .input-box .input-field {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .dropdown_menu {
+        width: 140px;
+        right: 0.5rem;
+    }
+
+    .contact h2 {
+        font-size: 20px;
+    }
+
+    form button {
+        padding: 8px 24px;
+        font-size: 14px;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-links a {
+        font-size: 1.2rem;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #56a263;
+    width: 100%;
+    margin-top: auto;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;  /* Add gap between social icons */
+}
+
+.social-links a {
+    color: #dc9c24;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+social-links a:hover {
+    color: #114a29;
+}
+
+footer p {
+    color: #dc9c24;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+/* Add this after your existing footer styles */
+main {
+    min-height: calc(100vh - 200px); /* Account for header and footer */
+    position: relative;
+}
+
+.contact-section {
+    margin-bottom: 6rem; /* Add space above footer */
+}

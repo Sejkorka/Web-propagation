@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #e5e4b4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #dc9c24;
+    font-size: 1rem;
+}
+
+
+.hover_l:hover{
+    color: #114a29;
+}
+
+.hover_d {
+    color: #dc9c24;  /* Zlatá barva */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hover_d:hover {
+    color: #114a29;  /* Tmavě zelená při najetí myší */
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+    background: #56a263;
+    margin-top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #56a263;
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar .toggle_btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #dc9c24;
+}
+
+.hover_l {
+    color: #dc9c24;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.hover_l::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #dc9c24;
+    transition: width 0.3s ease;
+}
+
+.hover_l:hover::after {
+    width: 100%;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 75px;         /* Posunuto níž z 60px na 75px */
+    width: 180px;      /* Zmenšeno z 200px na 180px */
+    background: #56a263;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown_menu.open{
+    display: block;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.photo-grid-container {
+    columns: 4;
+    column-gap: 5px;
+    padding: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-grid-item {
+    break-inside: avoid;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo-grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.photo-grid-item img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.photo-grid-item.wide-image {
+    column-span: all;
+}
+
+@media (max-width: 1200px) {
+    .photo-grid-container {
+        columns: 3;
+    }
+}
+
+@media (max-width: 992px){
+    .photo-grid-item {
+        flex: 1 1 100%;
+    }
+    
+    .wide-image {
+        flex: 1 1 100%;
+    }
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: none;
+        width: 180px;  /* Upravená šířka */
+        right: 2rem;   /* Upraveno zpět na původní hodnotu */
+        left: auto;    /* Odstraněno centrování */
+        margin: 0;     /* Odstraněno centrování */
+    }
+
+    .dropdown_menu.open{
+        display: block;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar .links {
+        display: none;
+    }
+    
+    .navbar .toggle_btn {
+        display: block;
+    }
+    
+    .dropdown_menu.open {
+        display: block;
+    }
+
+    .photo-grid-container {
+        columns: 2;
+    }
+    
+    .photo-grid-item.wide-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid-container {
+        columns: 1;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #56a263;
+    width: 100%;
+    margin-top: auto;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-links a {
+    color: #dc9c24;
+    font-size: 1.5rem;
+}
+
+footer p {
+    color: #dc9c24;
+    margin: 0;
+}

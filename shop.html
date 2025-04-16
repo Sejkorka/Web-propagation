@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakty</title>
+    <link rel="stylesheet" href="style-shop.css">
+    <link rel="icon" type="image/x-icon" href="logo/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section class="navmenu">
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="logo/logo.png" alt=""></a>
+                </div>
+                <ul class="links">
+                    <li><a class="hover_l" href="index.html">Domů</a></li>
+                    <li><a class="hover_l" href="galerie.html">Galerie</a></li>
+                    <li><a class="hover_l" href="shop.html">Kontakty</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="dropdown_menu">
+                <li><a class="hover_d" href="index.html">Domů</a></li>
+                <li><a class="hover_d" href="galerie.html">Galerie</a></li>
+                <li><a class="hover_d" href="shop.html">Kontakty</a></li>
+            </div>
+        </header>
+    </section>
+    
+    <main>
+        <section class="contact">
+            <form action="#">
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Celé Jméno" id="name" class="item" autocomplete="off">
+                        <div class="error-txt">Jméno nemůže být prázdné</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Email" id="email" class="item" autocomplete="off">
+                        <div class="error-txt email">Email nemůže být prázdný</div>
+                    </div>
+                </div>    
+
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Telefon" id="phone" class="item" autocomplete="off">
+                        <div class="error-txt">Telefon nemůže být prázdný</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Předmět" id="subject" class="item" autocomplete="off">
+                        <div class="error-txt">Předmět nemůže být prázdný</div>
+                    </div>
+                </div>
+
+                <div class="textarea-field field">
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="Zpráva" class="item" autocomplete="off"></textarea>
+                    <div class="error-txt">Zpráva nemůže být prázdná</div>
+                </div>
+
+                <button type="submit">Odeslat</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/sejkora_photography/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/sejkora.ondrej" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>&copy; 2024 Sejkora Photography. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="shop.js"></script>
+</body>
+</html>
